@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>358</defCnt>
+                <gubun>검역</gubun>
+                <gubunCn>隔離區</gubunCn>
+                <gubunEn>Lazaretto</gubunEn>
+                <incDec>6</incDec>
+                <isolClearCnt>3</isolClearCnt>
+                <isolIngCnt>355</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>6</overFlowCnt>
+                <qurRate>-</qurRate>
+                <seq>1033</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>12</defCnt>
+                <gubun>제주</gubun>
+                <gubunCn>济州</gubunCn>
+                <gubunEn>Jeju</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>4</isolClearCnt>
+                <isolIngCnt>8</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>1.79</qurRate>
+                <seq>1032</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>115</defCnt>
+                <gubun>경남</gubun>
+                <gubunCn>庆南</gubunCn>
+                <gubunEn>Gyeongsangnam-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>83</isolClearCnt>
+                <isolIngCnt>32</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>3.42</qurRate>
+                <seq>1031</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>48</deathCnt>
+                <defCnt>1330</defCnt>
+                <gubun>경북</gubun>
+                <gubunCn>庆北</gubunCn>
+                <gubunEn>Gyeongsangbuk-do</gubunEn>
+                <incDec>3</incDec>
+                <isolClearCnt>1004</isolClearCnt>
+                <isolIngCnt>278</isolIngCnt>
+                <localOccCnt>3</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>49.95</qurRate>
+                <seq>1030</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>15</defCnt>
+                <gubun>전남</gubun>
+                <gubunCn>全南</gubunCn>
+                <gubunEn>Jeollanam-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>5</isolClearCnt>
+                <isolIngCnt>10</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>0.8</qurRate>
+                <seq>1029</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>17</defCnt>
+                <gubun>전북</gubun>
+                <gubunCn>全北</gubunCn>
+                <gubunEn>Jeollabuk-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>8</isolClearCnt>
+                <isolIngCnt>9</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>0.94</qurRate>
+                <seq>1028</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>138</defCnt>
+                <gubun>충남</gubun>
+                <gubunCn>忠南</gubunCn>
+                <gubunEn>Chungcheongnam-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>106</isolClearCnt>
+                <isolIngCnt>32</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>6.5</qurRate>
+                <seq>1027</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>45</defCnt>
+                <gubun>충북</gubun>
+                <gubunCn>忠北</gubunCn>
+                <gubunEn>Chungcheongbuk-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>28</isolClearCnt>
+                <isolIngCnt>17</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>2.81</qurRate>
+                <seq>1026</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>1</deathCnt>
+                <defCnt>49</defCnt>
+                <gubun>강원</gubun>
+                <gubunCn>江原</gubunCn>
+                <gubunEn>Gangwon-do</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>26</isolClearCnt>
+                <isolIngCnt>22</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>3.18</qurRate>
+                <seq>1025</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>11</deathCnt>
+                <defCnt>624</defCnt>
+                <gubun>경기</gubun>
+                <gubunCn>京畿</gubunCn>
+                <gubunEn>Gyeonggi-do</gubunEn>
+                <incDec>9</incDec>
+                <isolClearCnt>286</isolClearCnt>
+                <isolIngCnt>327</isolIngCnt>
+                <localOccCnt>6</localOccCnt>
+                <overFlowCnt>3</overFlowCnt>
+                <qurRate>4.71</qurRate>
+                <seq>1024</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>46</defCnt>
+                <gubun>세종</gubun>
+                <gubunCn>世宗</gubunCn>
+                <gubunEn>Sejong</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>20</isolClearCnt>
+                <isolIngCnt>26</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>13.44</qurRate>
+                <seq>1023</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>1</deathCnt>
+                <defCnt>41</defCnt>
+                <gubun>울산</gubun>
+                <gubunCn>蔚山</gubunCn>
+                <gubunEn>Ulsan</gubunEn>
+                <incDec>1</incDec>
+                <isolClearCnt>30</isolClearCnt>
+                <isolIngCnt>10</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>1</overFlowCnt>
+                <qurRate>3.57</qurRate>
+                <seq>1022</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>39</defCnt>
+                <gubun>대전</gubun>
+                <gubunCn>大田</gubunCn>
+                <gubunEn>Daejeon</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>22</isolClearCnt>
+                <isolIngCnt>17</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>2.65</qurRate>
+                <seq>1021</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>27</defCnt>
+                <gubun>광주</gubun>
+                <gubunCn>光州</gubunCn>
+                <gubunEn>Gwangju</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>17</isolClearCnt>
+                <isolIngCnt>10</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>1.85</qurRate>
+                <seq>1020</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>0</deathCnt>
+                <defCnt>85</defCnt>
+                <gubun>인천</gubun>
+                <gubunCn>仁川</gubunCn>
+                <gubunEn>Incheon</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>35</isolClearCnt>
+                <isolIngCnt>50</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>2.88</qurRate>
+                <seq>1019</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>145</deathCnt>
+                <defCnt>6814</defCnt>
+                <gubun>대구</gubun>
+                <gubunCn>大邱</gubunCn>
+                <gubunEn>Daegu</gubunEn>
+                <incDec>7</incDec>
+                <isolClearCnt>5271</isolClearCnt>
+                <isolIngCnt>1398</isolIngCnt>
+                <localOccCnt>6</localOccCnt>
+                <overFlowCnt>1</overFlowCnt>
+                <qurRate>279.66</qurRate>
+                <seq>1018</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>3</deathCnt>
+                <defCnt>126</defCnt>
+                <gubun>부산</gubun>
+                <gubunCn>釜山</gubunCn>
+                <gubunEn>Busan</gubunEn>
+                <incDec>0</incDec>
+                <isolClearCnt>100</isolClearCnt>
+                <isolIngCnt>23</isolIngCnt>
+                <localOccCnt>0</localOccCnt>
+                <overFlowCnt>0</overFlowCnt>
+                <qurRate>3.69</qurRate>
+                <seq>1017</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>2</deathCnt>
+                <defCnt>599</defCnt>
+                <gubun>서울</gubun>
+                <gubunCn>首尔</gubunCn>
+                <gubunEn>Seoul</gubunEn>
+                <incDec>4</incDec>
+                <isolClearCnt>195</isolClearCnt>
+                <isolIngCnt>402</isolIngCnt>
+                <localOccCnt>3</localOccCnt>
+                <overFlowCnt>1</overFlowCnt>
+                <qurRate>6.15</qurRate>
+                <seq>1016</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+            <item>
+                <createDt>2020-04-11 11:04:48.48</createDt>
+                <deathCnt>211</deathCnt>
+                <defCnt>10480</defCnt>
+                <gubun>합계</gubun>
+                <gubunCn>合计</gubunCn>
+                <gubunEn>Total</gubunEn>
+                <incDec>30</incDec>
+                <isolClearCnt>7243</isolClearCnt>
+                <isolIngCnt>3026</isolIngCnt>
+                <localOccCnt>18</localOccCnt>
+                <overFlowCnt>12</overFlowCnt>
+                <qurRate>20.21</qurRate>
+                <seq>1015</seq>
+                <stdDay>2020년 04월 11일 00시</stdDay>
+                <updateDt></updateDt>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>19</totalCount>
+    </body>
+</response>

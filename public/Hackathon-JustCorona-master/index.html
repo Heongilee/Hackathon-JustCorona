@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>그저 코로나</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+	    <style>
+#content {
+	padding-top: 2rem;
+}
+.area {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #888;
+    border-radius: 3px;
+    font-size: 12px;
+    top: -5px;
+    left: 15px;
+    padding:2px;
+}
+
+.info {
+    font-size: 12px;
+    padding: 5px;
+	min-height: 100px;
+	/* min-width: 180px; */
+}
+.info .title {
+    font-weight: bold;
+}
+.col-xl-resizing-height {
+	padding-bottom: 6.25rem;
+}
+</style>
+<!--crawling-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+$(function(){
+	$.ajax({
+		url : "corona1.json",
+		dataTYPE: "json",
+		success : function(data){
+			console.log(data[0].Content)
+			$(".card-body.first").text(data[0]["Content"]);
+			$(".card-body.second").text(data[1]["Content"]);
+			$(".card-body.third").text(data[2]["Content"]);
+			
+			$(".m-0.font-weight-bold.text-primary.first").text(data[0]["Title"]);
+			$(".m-0.font-weight-bold.text-primary.second").text(data[1]["Title"]);
+			$(".m-0.font-weight-bold.text-primary.third").text(data[2]["Title"]);
+			
+			var urlFirst = data[0]["URL"];
+			var urlSecond = data[1]["URL"];
+			var urlThird = data[2]["URL"];
+			$(".card.shadow.mb-4.first").attr({'onclick' : 'window.open("'+ urlFirst+'")'});
+			$(".card.shadow.mb-4.second").attr({'onclick' : 'window.open("'+ urlSecond+'")'});
+			$(".card.shadow.mb-4.third").attr({'onclick' : 'window.open("'+ urlThird+'")'});
+
+	}
+	})
+	})
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- <script src="./js/module/readJson.js"></script> -->
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">그저 코로나 <sup>V 1.0</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span >대한민국 코로나 현황</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Components</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>확진자 차트</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>세계 확진자 테이블</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <!-- <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> -->
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <!-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button> -->
+
+                    <!-- Topbar Search -->
+                    <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                    <!-- Topbar Navbar -->
+                    <!-- <ul class="navbar-nav ml-auto"> -->
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <!-- <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a> -->
+                            <!-- Dropdown - Messages -->
+                            <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li> -->
+
+                        <!-- Nav Item - Alerts -->
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <!-- <span class="badge badge-danger badge-counter">3+</span>
+                            </a>  -->
+                            <!-- Dropdown - Alerts -->
+                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li> -->
+
+                        <!-- Nav Item - Messages -->
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <!-- <span class="badge badge-danger badge-counter">7</span>
+                            </a>  -->
+                            <!-- Dropdown - Messages -->
+                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div> -->
+
+                        <!-- Nav Item - User Information -->
+                        <!-- <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a> -->
+                            <!-- Dropdown - User Information -->
+                            <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav> -->
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">대한민국 코로나 현황</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                전체 확진자 수</div>
+                                            <div id="wholeConfirmedCnt" class="h5 mb-0 font-weight-bold text-gray-800">N명</div>
+                                        </div>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                전체 완치자 수</div>
+                                            <div id="wholeClearedCnt" class="h5 mb-0 font-weight-bold text-gray-800">N명</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">전체 사망자 수
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div id="wholeDeathCnt" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">N명</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                현재 확진자 수</div>
+                                            <div id="CurrentConfirmedCnt" class="h5 mb-0 font-weight-bold text-gray-800">N명</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">지역별 확진자 지도</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body col-xl-resizing-height">
+                                    <div class="chart-area">
+										
+	<!-- 지도 넣는 부분 -->
+										
+                                        <!-- <canvas id="myAreaChart"></canvas> -->
+										<div id="map" style="width:640;height:400px;"></div>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=17ae5910eac6c351f4147065ae766d14"></script>
+<script>
+// 지도에 폴리곤으로 표시할 영역데이터 배열입니다 
+var areas = [
+    {
+		name : '서울특별시',
+		path : [
+			new kakao.maps.LatLng(37.5577860000000, 127.1011040000000),
+			new kakao.maps.LatLng(37.6187260000000, 127.1217040000000),
+			new kakao.maps.LatLng(37.6203580000000, 127.1038510000000),
+			new kakao.maps.LatLng(37.6866810000000, 127.0921780000000),
+			new kakao.maps.LatLng(37.6975480000000, 127.0063470000000),
+			new kakao.maps.LatLng(37.6296030000000, 126.9884950000000),
+			new kakao.maps.LatLng(37.6513520000000, 126.9376830000000),
+			new kakao.maps.LatLng(37.6453720000000, 126.9109040000000),
+			new kakao.maps.LatLng(37.5891620000000, 126.8995140000000),
+			new kakao.maps.LatLng(37.5777890000000, 126.8766810000000),
+			new kakao.maps.LatLng(37.6067360000000, 126.8049220000000),
+			new kakao.maps.LatLng(37.5545190000000, 126.7677370000000),
+			
+			new kakao.maps.LatLng(37.5291740000000, 126.8277540000000),
+			new kakao.maps.LatLng(37.4753500000000, 126.8160120000000),
+			new kakao.maps.LatLng(37.4950210000000, 126.8688530000000),
+			new kakao.maps.LatLng(37.4349570000000, 126.9034280000000),
+			new kakao.maps.LatLng(37.4494590000000, 126.9360460000000),
+			new kakao.maps.LatLng(37.4401370000000, 126.9458310000000),
+			new kakao.maps.LatLng(37.4665480000000, 127.0312900000000),
+			new kakao.maps.LatLng(37.4266680000000, 127.0443370000000),
+			new kakao.maps.LatLng(37.4592990000000, 127.1154440000000),
+			new kakao.maps.LatLng(37.5001960000000, 127.1598050000000),
+			new kakao.maps.LatLng(37.5048540000000, 127.1402340000000),
+			new kakao.maps.LatLng(37.5441750000000, 127.1624140000000),
+			new kakao.maps.LatLng(37.5477960000000, 127.1819850000000),
+		]
+	}, {
+		name : '경기도',
+		path : [
+			new kakao.maps.LatLng(37.5409350000000, 127.8494500000000),
+			new kakao.maps.LatLng(37.540935, 127.849450),
+			new kakao.maps.LatLng(37.832839, 127.524851),
+			new kakao.maps.LatLng(37.879437, 127.583869),
+			new kakao.maps.LatLng(37.954690, 127.599771),
+			new kakao.maps.LatLng(37.968319, 127.536688),
+			new kakao.maps.LatLng(38.097731, 127.432498),
+			new kakao.maps.LatLng(38.274119, 127.091876),
+			new kakao.maps.LatLng(38.145020, 126.967649),
+			new kakao.maps.LatLng(38.040944, 126.863458),
+			new kakao.maps.LatLng(37.946201, 126.683129),
+			new kakao.maps.LatLng(37.755349, 126.530851),
+			
+			//여기부터 서울이랑 겹침
+			new kakao.maps.LatLng(37.5545190000000, 126.7677370000000),
+			new kakao.maps.LatLng(37.6067360000000, 126.8049220000000),
+			new kakao.maps.LatLng(37.5777890000000, 126.8766810000000),
+			new kakao.maps.LatLng(37.5891620000000, 126.8995140000000),
+			new kakao.maps.LatLng(37.6453720000000, 126.9109040000000),
+			new kakao.maps.LatLng(37.6513520000000, 126.9376830000000),
+			new kakao.maps.LatLng(37.6296030000000, 126.9884950000000),
+			new kakao.maps.LatLng(37.6975480000000, 127.0063470000000),
+			new kakao.maps.LatLng(37.6866810000000, 127.0921780000000),
+			new kakao.maps.LatLng(37.6203580000000, 127.1038510000000),
+			new kakao.maps.LatLng(37.6187260000000, 127.1217040000000),
+			new kakao.maps.LatLng(37.5577860000000, 127.1011040000000),
+			
+			new kakao.maps.LatLng(37.5477960000000, 127.1819850000000),
+			new kakao.maps.LatLng(37.5441750000000, 127.1624140000000),
+			new kakao.maps.LatLng(37.5048540000000, 127.1402340000000),
+			new kakao.maps.LatLng(37.5001960000000, 127.1598050000000),
+			new kakao.maps.LatLng(37.4592990000000, 127.1154440000000),
+			new kakao.maps.LatLng(37.4266680000000, 127.0443370000000),
+			new kakao.maps.LatLng(37.4665480000000, 127.0312900000000),
+			new kakao.maps.LatLng(37.4401370000000, 126.9458310000000),
+			new kakao.maps.LatLng(37.4494590000000, 126.9360460000000),
+			new kakao.maps.LatLng(37.4349570000000, 126.9034280000000),
+			new kakao.maps.LatLng(37.4950210000000, 126.8688530000000),
+			new kakao.maps.LatLng(37.4753500000000, 126.8160120000000),
+			new kakao.maps.LatLng(37.5291740000000, 126.8277540000000),
+			new kakao.maps.LatLng(37.5545190000000, 126.7677370000000),
+			//여기까지 겹치는 부분
+		
+			new kakao.maps.LatLng(37.542253, 126.769782),
+			new kakao.maps.LatLng(37.481251, 126.764289),
+			new kakao.maps.LatLng(37.345996, 126.720343),
+			new kakao.maps.LatLng(37.267349, 126.561042),
+			new kakao.maps.LatLng(36.921205, 126.912604),
+			new kakao.maps.LatLng(36.938769, 127.275153),
+			new kakao.maps.LatLng(37.149224, 127.610236),
+			new kakao.maps.LatLng(37.179867, 127.709113),
+			new kakao.maps.LatLng(37.485610, 127.764045),
+			new kakao.maps.LatLng(37.503043, 127.736579),
+			new kakao.maps.LatLng(37.543343, 127.816591)
+		]
+	}, {
+		name : '강원도',
+		path : [
+			new kakao.maps.LatLng(38.588940, 128.361717),
+			new kakao.maps.LatLng(38.451411, 128.295799),
+			new kakao.maps.LatLng(38.287754, 128.065086),
+
+			//여기 경기도랑 겹침
+			new kakao.maps.LatLng(38.274119, 127.091876),
+			new kakao.maps.LatLng(38.097731, 127.432498),
+			new kakao.maps.LatLng(37.968319, 127.536688),
+			new kakao.maps.LatLng(37.954690, 127.599771),
+			new kakao.maps.LatLng(37.879437, 127.583869),
+			new kakao.maps.LatLng(37.832839, 127.524851),
+			new kakao.maps.LatLng(37.540935, 127.849450),
+			new kakao.maps.LatLng(37.5409350000000, 127.8494500000000),
+			new kakao.maps.LatLng(37.543343, 127.816591),
+			new kakao.maps.LatLng(37.503043, 127.736579),
+			new kakao.maps.LatLng(37.485610, 127.764045),
+			new kakao.maps.LatLng(37.179867, 127.709113),
+			//여기까지 겹침
+			
+			new kakao.maps.LatLng(37.171645, 127.911479),
+			new kakao.maps.LatLng(37.232900, 127.911479),
+			new kakao.maps.LatLng(37.259136, 127.966411),
+			new kakao.maps.LatLng(37.232900, 128.032329),
+			new kakao.maps.LatLng(37.197903, 128.043315),
+			new kakao.maps.LatLng(37.232900, 128.328959),
+			new kakao.maps.LatLng(37.154134, 128.285014),
+			new kakao.maps.LatLng(37.057754, 128.735454),
+			new kakao.maps.LatLng(37.057754, 129.207866),
+			new kakao.maps.LatLng(37.145378, 129.339702),
+
+		]
+	},{
+		name : '충청남도',
+		path :[
+			//경기도랑 겹치는 부분
+			new kakao.maps.LatLng(36.938769, 127.275153),
+			new kakao.maps.LatLng(36.921205, 126.912604),
+
+
+			new kakao.maps.LatLng(37.033314, 126.523825),
+			new kakao.maps.LatLng(36.988069, 126.364146),
+			new kakao.maps.LatLng(36.819194, 126.158109),
+			new kakao.maps.LatLng(36.426463, 126.369297),
+			new kakao.maps.LatLng(36.409826, 126.490280),
+			new kakao.maps.LatLng(36.156339, 126.514978),
+			new kakao.maps.LatLng(36.023403, 126.678353),
+			new kakao.maps.LatLng(36.073379, 126.853484),
+			new kakao.maps.LatLng(36.144123, 126.874088),
+			new kakao.maps.LatLng(36.156601, 127.059521),
+			new kakao.maps.LatLng(36.081705, 127.085276),
+			new kakao.maps.LatLng(36.139963, 127.342822),
+			new kakao.maps.LatLng(36.031735, 127.394332),
+			new kakao.maps.LatLng(36.031735, 127.435539),
+			new kakao.maps.LatLng(35.990069, 127.466445),
+			new kakao.maps.LatLng(35.998404, 127.528256),
+			new kakao.maps.LatLng(36.044230, 127.523105),
+			new kakao.maps.LatLng(36.019237, 127.610670),
+			new kakao.maps.LatLng(36.218959, 127.584916),
+			new kakao.maps.LatLng(36.235580, 127.523105),
+			new kakao.maps.LatLng(36.189865, 127.440690),
+			new kakao.maps.LatLng(36.264657, 127.368577),
+			new kakao.maps.LatLng(36.181550, 127.332520),
+			new kakao.maps.LatLng(36.277116, 127.239804),
+			new kakao.maps.LatLng(36.416521, 127.273549),
+			new kakao.maps.LatLng(36.431567, 127.324971),
+			new kakao.maps.LatLng(36.557462, 127.346007),
+			new kakao.maps.LatLng(36.579989, 127.299260),
+			new kakao.maps.LatLng(36.690650, 127.278223),
+			new kakao.maps.LatLng(36.754349, 127.334320),
+			new kakao.maps.LatLng(36.756222, 127.395091),
+			new kakao.maps.LatLng(36.763712, 127.413790),
+			new kakao.maps.LatLng(36.827350, 127.338995),
+			new kakao.maps.LatLng(36.891192, 127.288749)
+
+		]
+	}
+	,{
+		name : '충청북도',
+		path : [
+
+			//강원도랑 겹치는 부분
+			new kakao.maps.LatLng(37.057754, 128.735454),
+			new kakao.maps.LatLng(37.154134, 128.285014),
+			new kakao.maps.LatLng(37.232900, 128.328959),
+			new kakao.maps.LatLng(37.197903, 128.043315),
+			new kakao.maps.LatLng(37.232900, 128.032329),
+			new kakao.maps.LatLng(37.259136, 127.966411),
+			new kakao.maps.LatLng(37.232900, 127.911479),
+			new kakao.maps.LatLng(37.171645, 127.911479),
+			new kakao.maps.LatLng(37.179867, 127.709113),
+
+			//경기도랑 겹치는 부분
+			new kakao.maps.LatLng(37.149224, 127.610236),
+			new kakao.maps.LatLng(36.938769, 127.275153),
+
+			//충청도랑 겹치는 부분
+			new kakao.maps.LatLng(36.891192, 127.288749),
+			new kakao.maps.LatLng(36.827350, 127.338995),
+			new kakao.maps.LatLng(36.763712, 127.413790),
+			new kakao.maps.LatLng(36.756222, 127.395091),
+			new kakao.maps.LatLng(36.754349, 127.334320),
+			new kakao.maps.LatLng(36.690650, 127.278223),
+			new kakao.maps.LatLng(36.579989, 127.299260),	
+			new kakao.maps.LatLng(36.557462, 127.346007),
+			new kakao.maps.LatLng(36.431567, 127.324971),
+			//여기까지
+
+			new kakao.maps.LatLng(36.502201, 127.381915),
+			new kakao.maps.LatLng(36.485050, 127.405496),
+			new kakao.maps.LatLng(36.458864, 127.405496),
+			new kakao.maps.LatLng(36.459767, 127.435813),
+			new kakao.maps.LatLng(36.472410, 127.467254),
+			new kakao.maps.LatLng(36.479633, 127.482974),
+			new kakao.maps.LatLng(36.458864, 127.481851),
+			new kakao.maps.LatLng(36.386381, 127.560707),
+			new kakao.maps.LatLng(36.337483, 127.512131),
+
+			//충청도랑 다시 겹치는 부분
+			new kakao.maps.LatLng(36.235580, 127.523105),
+			new kakao.maps.LatLng(36.218959, 127.584916),
+			new kakao.maps.LatLng(36.019237, 127.610670),
+			//여기까지
+			
+			new kakao.maps.LatLng(36.020982, 127.772266),
+			new kakao.maps.LatLng(36.068179, 127.947382),
+			new kakao.maps.LatLng(36.186047, 127.947382),
+			new kakao.maps.LatLng(36.209600, 128.027643),
+			new kakao.maps.LatLng(36.250800, 128.027643),
+			new kakao.maps.LatLng(36.244915, 127.940085),
+			new kakao.maps.LatLng(36.268450, 127.896306),
+			new kakao.maps.LatLng(36.321377, 127.830638),
+			new kakao.maps.LatLng(36.356642, 127.874417),
+			new kakao.maps.LatLng(36.515136, 127.881713),
+			new kakao.maps.LatLng(36.567896, 127.837935),
+			new kakao.maps.LatLng(36.738259, 127.919505),
+			new kakao.maps.LatLng(36.727547, 128.026435),
+			new kakao.maps.LatLng(36.834601, 128.053158),
+			new kakao.maps.LatLng(36.888073, 128.213564),
+			new kakao.maps.LatLng(36.823903, 128.347227),
+			new kakao.maps.LatLng(36.823909, 128.414059),
+			new kakao.maps.LatLng(36.909451, 128.427425)
+
+		]
+	},{
+		name : '대전광역시',
+		path : [
+			//충북이랑 겹치는 곳
+			new kakao.maps.LatLng(36.502201, 127.381915),
+			new kakao.maps.LatLng(36.485050, 127.405496),
+			new kakao.maps.LatLng(36.458864, 127.405496),
+			new kakao.maps.LatLng(36.459767, 127.435813),
+			new kakao.maps.LatLng(36.472410, 127.467254),
+			new kakao.maps.LatLng(36.479633, 127.482974),
+			new kakao.maps.LatLng(36.458864, 127.481851),
+			new kakao.maps.LatLng(36.386381, 127.560707),
+			new kakao.maps.LatLng(36.337483, 127.512131),
+			new kakao.maps.LatLng(36.235580, 127.523105),
+			
+			//충남이랑 겹치는 곳
+			new kakao.maps.LatLng(36.189865, 127.440690),
+			new kakao.maps.LatLng(36.264657, 127.368577),
+			new kakao.maps.LatLng(36.181550, 127.332520),
+			new kakao.maps.LatLng(36.277116, 127.239804),
+			new kakao.maps.LatLng(36.416521, 127.273549),
+			new kakao.maps.LatLng(36.431567, 127.324971)
+		]
+	}
+	
+    //     name : '용산구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.5548768201904, 126.96966524449994),
+    //         new kakao.maps.LatLng(37.55308718044556, 126.97642899633566),
+    //         new kakao.maps.LatLng(37.55522076659584, 126.97654602427454),
+    //         new kakao.maps.LatLng(37.55320655210504, 126.97874667968763),
+    //         new kakao.maps.LatLng(37.55368689494708, 126.98541456064552),
+    //         new kakao.maps.LatLng(37.54722934282707, 126.995229135048),
+    //         new kakao.maps.LatLng(37.549694559809545, 126.99832516302801),
+    //         new kakao.maps.LatLng(37.550159406110104, 127.00436818301327),
+    //         new kakao.maps.LatLng(37.54820235864802, 127.0061334023129),
+    //         new kakao.maps.LatLng(37.546169758665414, 127.00499711608721),
+    //         new kakao.maps.LatLng(37.54385947805103, 127.00727818360471),
+    //         new kakao.maps.LatLng(37.54413326436179, 127.00898460651953),
+    //         new kakao.maps.LatLng(37.539639030116945, 127.00959054834321),
+    //         new kakao.maps.LatLng(37.537681185520256, 127.01726163044557),
+    //         new kakao.maps.LatLng(37.53378887274516, 127.01719284893274),
+    //         new kakao.maps.LatLng(37.52290225898471, 127.00614038053493),
+    //         new kakao.maps.LatLng(37.51309192794448, 126.99070240960813),
+    //         new kakao.maps.LatLng(37.50654651085339, 126.98553683648308),
+    //         new kakao.maps.LatLng(37.50702053393398, 126.97524914998174),
+    //         new kakao.maps.LatLng(37.51751820477105, 126.94988506562748),
+    //         new kakao.maps.LatLng(37.52702918583156, 126.94987870367682),
+    //         new kakao.maps.LatLng(37.534519656862926, 126.94481851935942),
+    //         new kakao.maps.LatLng(37.537500243531994, 126.95335659960566),
+    //         new kakao.maps.LatLng(37.54231338779177, 126.95817394011969),
+    //         new kakao.maps.LatLng(37.54546318600178, 126.95790512689311),
+    //         new kakao.maps.LatLng(37.548791603525764, 126.96371984820232),
+    //         new kakao.maps.LatLng(37.55155543391863, 126.96233786542686),
+    //         new kakao.maps.LatLng(37.5541513366375, 126.9657135934734),
+    //         new kakao.maps.LatLng(37.55566236579088, 126.9691850696746),
+    //         new kakao.maps.LatLng(37.5548768201904, 126.96966524449994)
+    //     ]
+    // }, {
+    //     name : '중구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.544062989758594, 127.00854659142894),
+    //         new kakao.maps.LatLng(37.54385947805103, 127.00727818360471),
+    //         new kakao.maps.LatLng(37.546169758665414, 127.00499711608721),
+    //         new kakao.maps.LatLng(37.54820235864802, 127.0061334023129),
+    //         new kakao.maps.LatLng(37.550159406110104, 127.00436818301327),
+    //         new kakao.maps.LatLng(37.549694559809545, 126.99832516302801),
+    //         new kakao.maps.LatLng(37.54722934282707, 126.995229135048),
+    //         new kakao.maps.LatLng(37.55368689494708, 126.98541456064552),
+    //         new kakao.maps.LatLng(37.55320655210504, 126.97874667968763),
+    //         new kakao.maps.LatLng(37.55522076659584, 126.97654602427454),
+    //         new kakao.maps.LatLng(37.55308718044556, 126.97642899633566),
+    //         new kakao.maps.LatLng(37.55487749311664, 126.97240854546743),
+    //         new kakao.maps.LatLng(37.5548766923893, 126.9691718124876),
+    //         new kakao.maps.LatLng(37.55566236579088, 126.9691850696746),
+    //         new kakao.maps.LatLng(37.55155543391863, 126.96233786542686),
+    //         new kakao.maps.LatLng(37.55498984534305, 126.96173858545431),
+    //         new kakao.maps.LatLng(37.55695455613004, 126.96343068837372),
+    //         new kakao.maps.LatLng(37.5590262922649, 126.9616731414449),
+    //         new kakao.maps.LatLng(37.56197662569172, 126.96946316364357),
+    //         new kakao.maps.LatLng(37.56582132960869, 126.96669525397355),
+    //         new kakao.maps.LatLng(37.56824746386509, 126.96909838710842),
+    //         new kakao.maps.LatLng(37.569485309984174, 126.97637402412326),
+    //         new kakao.maps.LatLng(37.56810323716611, 126.98905202099309),
+    //         new kakao.maps.LatLng(37.56961739576364, 127.00225936812329),
+    //         new kakao.maps.LatLng(37.56966688588187, 127.0152677241078),
+    //         new kakao.maps.LatLng(37.572022763755164, 127.0223363152772),
+    //         new kakao.maps.LatLng(37.57190723475508, 127.02337770475695),
+    //         new kakao.maps.LatLng(37.56973041414113, 127.0234585247501),
+    //         new kakao.maps.LatLng(37.565200182350495, 127.02358387477513),
+    //         new kakao.maps.LatLng(37.56505173515675, 127.02678930885806),
+    //         new kakao.maps.LatLng(37.563390358462826, 127.02652159646888),
+    //         new kakao.maps.LatLng(37.5607276739534, 127.02339232029838),
+    //         new kakao.maps.LatLng(37.55779412537163, 127.0228934248264),
+    //         new kakao.maps.LatLng(37.556850715898484, 127.01807638779917),
+    //         new kakao.maps.LatLng(37.55264513061776, 127.01620129137214),
+    //         new kakao.maps.LatLng(37.547466935106435, 127.00931996404753),
+    //         new kakao.maps.LatLng(37.54502351209897, 127.00815187343248),
+    //         new kakao.maps.LatLng(37.544062989758594, 127.00854659142894)
+    //     ]
+    // }, {
+    //     name : '종로구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.631840777111364, 126.9749313865046),
+    //         new kakao.maps.LatLng(37.632194205253654, 126.97609588529602),
+    //         new kakao.maps.LatLng(37.629026103322374, 126.97496405167149),
+    //         new kakao.maps.LatLng(37.6285585388996, 126.97992605309885),
+    //         new kakao.maps.LatLng(37.626378096236195, 126.97960492198952),
+    //         new kakao.maps.LatLng(37.6211493968146, 126.98365245774505),
+    //         new kakao.maps.LatLng(37.6177725051378, 126.9837302191854),
+    //         new kakao.maps.LatLng(37.613985109550605, 126.98658977758268),
+    //         new kakao.maps.LatLng(37.611364924201304, 126.98565700183143),
+    //         new kakao.maps.LatLng(37.60401657024552, 126.98665951539246),
+    //         new kakao.maps.LatLng(37.60099164566844, 126.97852019816328),
+    //         new kakao.maps.LatLng(37.59790270809407, 126.97672287261275),
+    //         new kakao.maps.LatLng(37.59447673441787, 126.98544283754865),
+    //         new kakao.maps.LatLng(37.59126960661375, 126.98919808879788),
+    //         new kakao.maps.LatLng(37.592300831997434, 127.0009511248032),
+    //         new kakao.maps.LatLng(37.58922302426079, 127.00228260552726),
+    //         new kakao.maps.LatLng(37.586091007146834, 127.00667090686603),
+    //         new kakao.maps.LatLng(37.58235007703611, 127.00677925856456),
+    //         new kakao.maps.LatLng(37.58047228501006, 127.00863575242668),
+    //         new kakao.maps.LatLng(37.58025588757531, 127.01058748333907),
+    //         new kakao.maps.LatLng(37.582338528091164, 127.01483104096094),
+    //         new kakao.maps.LatLng(37.581693162424465, 127.01673289259993),
+    //         new kakao.maps.LatLng(37.57758802896556, 127.01812215416163),
+    //         new kakao.maps.LatLng(37.5788668917658, 127.02140099081309),
+    //         new kakao.maps.LatLng(37.578034045208426, 127.02313962015988),
+    //         new kakao.maps.LatLng(37.57190723475508, 127.02337770475695),
+    //         new kakao.maps.LatLng(37.56966688588187, 127.0152677241078),
+    //         new kakao.maps.LatLng(37.56961739576364, 127.00225936812329),
+    //         new kakao.maps.LatLng(37.5681357695346, 126.99014772014593),
+    //         new kakao.maps.LatLng(37.569315246023024, 126.9732046364419),
+    //         new kakao.maps.LatLng(37.56824746386509, 126.96909838710842),
+    //         new kakao.maps.LatLng(37.56582132960869, 126.96669525397355),
+    //         new kakao.maps.LatLng(37.57874076105342, 126.95354824618335),
+    //         new kakao.maps.LatLng(37.581020184166476, 126.95812059678624),
+    //         new kakao.maps.LatLng(37.59354736740056, 126.95750665936443),
+    //         new kakao.maps.LatLng(37.595061575856455, 126.9590412421402),
+    //         new kakao.maps.LatLng(37.59833350100327, 126.9576941779143),
+    //         new kakao.maps.LatLng(37.59875701675023, 126.95306020161668),
+    //         new kakao.maps.LatLng(37.602476031211225, 126.95237386792348),
+    //         new kakao.maps.LatLng(37.60507154496655, 126.95404376087069),
+    //         new kakao.maps.LatLng(37.60912809443569, 126.95032198271032),
+    //         new kakao.maps.LatLng(37.615539700280216, 126.95072546923387),
+    //         new kakao.maps.LatLng(37.62433621196653, 126.94900237336302),
+    //         new kakao.maps.LatLng(37.62642708817027, 126.95037844036497),
+    //         new kakao.maps.LatLng(37.629590994617104, 126.95881385457929),
+    //         new kakao.maps.LatLng(37.629794440379136, 126.96376660599225),
+    //         new kakao.maps.LatLng(37.632373740990175, 126.97302793692637),
+    //         new kakao.maps.LatLng(37.631840777111364, 126.9749313865046)
+    //     ]
+    // }, {
+    //     name : '서대문구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.59851932019209, 126.95347706883003),
+    //         new kakao.maps.LatLng(37.5992407011344, 126.95499403097206),
+    //         new kakao.maps.LatLng(37.59833350100327, 126.9576941779143),
+    //         new kakao.maps.LatLng(37.595061575856455, 126.9590412421402),
+    //         new kakao.maps.LatLng(37.59354736740056, 126.95750665936443),
+    //         new kakao.maps.LatLng(37.581020184166476, 126.95812059678624),
+    //         new kakao.maps.LatLng(37.57874076105342, 126.95354824618335),
+    //         new kakao.maps.LatLng(37.56197662569172, 126.96946316364357),
+    //         new kakao.maps.LatLng(37.5575156365052, 126.95991288916548),
+    //         new kakao.maps.LatLng(37.55654562007193, 126.9413708153468),
+    //         new kakao.maps.LatLng(37.555098093384, 126.93685861757348),
+    //         new kakao.maps.LatLng(37.55884751347576, 126.92659242918415),
+    //         new kakao.maps.LatLng(37.5633319104926, 126.92828128083327),
+    //         new kakao.maps.LatLng(37.56510367293256, 126.92601582346325),
+    //         new kakao.maps.LatLng(37.57082994377989, 126.9098094620638),
+    //         new kakao.maps.LatLng(37.57599550420081, 126.902091747923),
+    //         new kakao.maps.LatLng(37.587223103650295, 126.91284666446226),
+    //         new kakao.maps.LatLng(37.58541570520177, 126.91531241017965),
+    //         new kakao.maps.LatLng(37.585870567159255, 126.91638068573187),
+    //         new kakao.maps.LatLng(37.583095195853055, 126.9159399866114),
+    //         new kakao.maps.LatLng(37.583459593417196, 126.92175886498167),
+    //         new kakao.maps.LatLng(37.587104600730505, 126.92388813813815),
+    //         new kakao.maps.LatLng(37.588386594820484, 126.92800815682232),
+    //         new kakao.maps.LatLng(37.59157595859555, 126.92776504133688),
+    //         new kakao.maps.LatLng(37.59455434247408, 126.93027139545339),
+    //         new kakao.maps.LatLng(37.59869748704149, 126.94088480070904),
+    //         new kakao.maps.LatLng(37.60065830191363, 126.9414041615336),
+    //         new kakao.maps.LatLng(37.60305781086164, 126.93995273804141),
+    //         new kakao.maps.LatLng(37.610598531321436, 126.95037536795142),
+    //         new kakao.maps.LatLng(37.6083605525023, 126.95056259057313),
+    //         new kakao.maps.LatLng(37.60507154496655, 126.95404376087069),
+    //         new kakao.maps.LatLng(37.602476031211225, 126.95237386792348),
+    //         new kakao.maps.LatLng(37.59851932019209, 126.95347706883003)
+    //     ]
+    // }, {
+    //     name : '동대문구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.607062869017085, 127.07111288773496),
+    //         new kakao.maps.LatLng(37.60107201319839, 127.07287376670605),
+    //         new kakao.maps.LatLng(37.59724304056685, 127.06949105186925),
+    //         new kakao.maps.LatLng(37.58953367466315, 127.07030363208528),
+    //         new kakao.maps.LatLng(37.58651213184981, 127.07264218709383),
+    //         new kakao.maps.LatLng(37.5849555116177, 127.07216063016078),
+    //         new kakao.maps.LatLng(37.58026781100598, 127.07619547037923),
+    //         new kakao.maps.LatLng(37.571869232268774, 127.0782018408153),
+    //         new kakao.maps.LatLng(37.559961773835425, 127.07239004251258),
+    //         new kakao.maps.LatLng(37.56231553903832, 127.05876047165025),
+    //         new kakao.maps.LatLng(37.57038253579033, 127.04794980454399),
+    //         new kakao.maps.LatLng(37.572878529071055, 127.04263554582458),
+    //         new kakao.maps.LatLng(37.57302061077518, 127.0381755492195),
+    //         new kakao.maps.LatLng(37.56978273516453, 127.03099733100001),
+    //         new kakao.maps.LatLng(37.57190723475508, 127.02337770475695),
+    //         new kakao.maps.LatLng(37.57838361223621, 127.0232348231103),
+    //         new kakao.maps.LatLng(37.58268174514337, 127.02953994610249),
+    //         new kakao.maps.LatLng(37.58894739851823, 127.03553876830637),
+    //         new kakao.maps.LatLng(37.5911852565689, 127.03621919708065),
+    //         new kakao.maps.LatLng(37.59126734230753, 127.03875553445558),
+    //         new kakao.maps.LatLng(37.5956815721534, 127.04062845365279),
+    //         new kakao.maps.LatLng(37.5969637344377, 127.04302522879048),
+    //         new kakao.maps.LatLng(37.59617641777492, 127.04734129391157),
+    //         new kakao.maps.LatLng(37.60117358544485, 127.05101351973708),
+    //         new kakao.maps.LatLng(37.600149587503246, 127.05209540476308),
+    //         new kakao.maps.LatLng(37.60132672748398, 127.05508130598699),
+    //         new kakao.maps.LatLng(37.6010580545608, 127.05917142337097),
+    //         new kakao.maps.LatLng(37.605121767227374, 127.06219611364686),
+    //         new kakao.maps.LatLng(37.607062869017085, 127.07111288773496)
+    //     ]
+    // }, {
+    //     name : '성북구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.63654916557213, 126.98446028560235),
+    //         new kakao.maps.LatLng(37.631446839436855, 126.99372381657889),
+    //         new kakao.maps.LatLng(37.626192451322005, 126.99927047335905),
+    //         new kakao.maps.LatLng(37.62382095469671, 127.00488450145781),
+    //         new kakao.maps.LatLng(37.624026217174986, 127.00788862747375),
+    //         new kakao.maps.LatLng(37.6205124078061, 127.00724034082933),
+    //         new kakao.maps.LatLng(37.61679651952433, 127.01014412786792),
+    //         new kakao.maps.LatLng(37.61472018601129, 127.01451127202589),
+    //         new kakao.maps.LatLng(37.614629670135216, 127.01757841621624),
+    //         new kakao.maps.LatLng(37.61137091590441, 127.02219857751122),
+    //         new kakao.maps.LatLng(37.612692696824915, 127.02642583551054),
+    //         new kakao.maps.LatLng(37.612367438936786, 127.03018593770908),
+    //         new kakao.maps.LatLng(37.60896889076571, 127.0302525167858),
+    //         new kakao.maps.LatLng(37.61279787695882, 127.03730791358603),
+    //         new kakao.maps.LatLng(37.62426467261789, 127.04973339977498),
+    //         new kakao.maps.LatLng(37.61449950127667, 127.06174181124696),
+    //         new kakao.maps.LatLng(37.61561580859776, 127.06985247014711),
+    //         new kakao.maps.LatLng(37.61351359068103, 127.07170798866412),
+    //         new kakao.maps.LatLng(37.60762512162974, 127.07105453180604),
+    //         new kakao.maps.LatLng(37.605121767227374, 127.06219611364686),
+    //         new kakao.maps.LatLng(37.6010580545608, 127.05917142337097),
+    //         new kakao.maps.LatLng(37.60132672748398, 127.05508130598699),
+    //         new kakao.maps.LatLng(37.600149587503246, 127.05209540476308),
+    //         new kakao.maps.LatLng(37.60117358544485, 127.05101351973708),
+    //         new kakao.maps.LatLng(37.59617641777492, 127.04734129391157),
+    //         new kakao.maps.LatLng(37.59644879095525, 127.04184728392097),
+    //         new kakao.maps.LatLng(37.59126734230753, 127.03875553445558),
+    //         new kakao.maps.LatLng(37.5911852565689, 127.03621919708065),
+    //         new kakao.maps.LatLng(37.58894739851823, 127.03553876830637),
+    //         new kakao.maps.LatLng(37.58268174514337, 127.02953994610249),
+    //         new kakao.maps.LatLng(37.57782865303167, 127.02296295333255),
+    //         new kakao.maps.LatLng(37.57889204835333, 127.02179043639809),
+    //         new kakao.maps.LatLng(37.57758802896556, 127.01812215416163),
+    //         new kakao.maps.LatLng(37.581693162424465, 127.01673289259993),
+    //         new kakao.maps.LatLng(37.582338528091164, 127.01483104096094),
+    //         new kakao.maps.LatLng(37.58025588757531, 127.01058748333907),
+    //         new kakao.maps.LatLng(37.58047228501006, 127.00863575242668),
+    //         new kakao.maps.LatLng(37.58235007703611, 127.00677925856456),
+    //         new kakao.maps.LatLng(37.586091007146834, 127.00667090686603),
+    //         new kakao.maps.LatLng(37.58922302426079, 127.00228260552726),
+    //         new kakao.maps.LatLng(37.592300831997434, 127.0009511248032),
+    //         new kakao.maps.LatLng(37.59126960661375, 126.98919808879788),
+    //         new kakao.maps.LatLng(37.59447673441787, 126.98544283754865),
+    //         new kakao.maps.LatLng(37.59790270809407, 126.97672287261275),
+    //         new kakao.maps.LatLng(37.60099164566844, 126.97852019816328),
+    //         new kakao.maps.LatLng(37.60451393107786, 126.98678626394351),
+    //         new kakao.maps.LatLng(37.611364924201304, 126.98565700183143),
+    //         new kakao.maps.LatLng(37.613985109550605, 126.98658977758268),
+    //         new kakao.maps.LatLng(37.6177725051378, 126.9837302191854),
+    //         new kakao.maps.LatLng(37.6211493968146, 126.98365245774505),
+    //         new kakao.maps.LatLng(37.626378096236195, 126.97960492198952),
+    //         new kakao.maps.LatLng(37.6285585388996, 126.97992605309885),
+    //         new kakao.maps.LatLng(37.62980449548538, 126.97468284124939),
+    //         new kakao.maps.LatLng(37.633657663246694, 126.97740053878216),
+    //         new kakao.maps.LatLng(37.63476479485093, 126.98154674721893),
+    //         new kakao.maps.LatLng(37.63780700422825, 126.9849494717052),
+    //         new kakao.maps.LatLng(37.63654916557213, 126.98446028560235)
+    //     ]
+    // }, {
+    //     name : '성동구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.57275246810175, 127.04241813085706),
+    //         new kakao.maps.LatLng(37.57038253579033, 127.04794980454399),
+    //         new kakao.maps.LatLng(37.56231553903832, 127.05876047165025),
+    //         new kakao.maps.LatLng(37.5594131360664, 127.07373408220053),
+    //         new kakao.maps.LatLng(37.52832388381049, 127.05621773388143),
+    //         new kakao.maps.LatLng(37.53423885672233, 127.04604398310076),
+    //         new kakao.maps.LatLng(37.53582328355087, 127.03979942567628),
+    //         new kakao.maps.LatLng(37.53581367627865, 127.0211714455564),
+    //         new kakao.maps.LatLng(37.53378887274516, 127.01719284893274),
+    //         new kakao.maps.LatLng(37.537681185520256, 127.01726163044557),
+    //         new kakao.maps.LatLng(37.53938672166098, 127.00993448922989),
+    //         new kakao.maps.LatLng(37.54157804358092, 127.00879872996808),
+    //         new kakao.maps.LatLng(37.54502351209897, 127.00815187343248),
+    //         new kakao.maps.LatLng(37.547466935106435, 127.00931996404753),
+    //         new kakao.maps.LatLng(37.55264513061776, 127.01620129137214),
+    //         new kakao.maps.LatLng(37.556850715898484, 127.01807638779917),
+    //         new kakao.maps.LatLng(37.55779412537163, 127.0228934248264),
+    //         new kakao.maps.LatLng(37.5607276739534, 127.02339232029838),
+    //         new kakao.maps.LatLng(37.563390358462826, 127.02652159646888),
+    //         new kakao.maps.LatLng(37.56505173515675, 127.02678930885806),
+    //         new kakao.maps.LatLng(37.565200182350495, 127.02358387477513),
+    //         new kakao.maps.LatLng(37.57190723475508, 127.02337770475695),
+    //         new kakao.maps.LatLng(37.56978273516453, 127.03099733100001),
+    //         new kakao.maps.LatLng(37.57302061077518, 127.0381755492195),
+    //         new kakao.maps.LatLng(37.57275246810175, 127.04241813085706)
+    //     ]
+    // }, {
+    //     name : '마포구',
+    //     path : [
+    //         new kakao.maps.LatLng(37.584651324803644, 126.88883849288884),
+    //         new kakao.maps.LatLng(37.57082994377989, 126.9098094620638),
+    //         new kakao.maps.LatLng(37.56510367293256, 126.92601582346325),
+    //         new kakao.maps.LatLng(37.5633319104926, 126.92828128083327),
+    //         new kakao.maps.LatLng(37.55884751347576, 126.92659242918415),
+    //         new kakao.maps.LatLng(37.55675317809392, 126.93190919632814),
+    //         new kakao.maps.LatLng(37.555098093384, 126.93685861757348),
+    //         new kakao.maps.LatLng(37.55654562007193, 126.9413708153468),
+    //         new kakao.maps.LatLng(37.557241466445234, 126.95913438471307),
+    //         new kakao.maps.LatLng(37.55908394430372, 126.96163689468189),
+    //         new kakao.maps.LatLng(37.55820141918588, 126.96305432966605),
+    //         new kakao.maps.LatLng(37.554784413504734, 126.9617251098019),
+    //         new kakao.maps.LatLng(37.548791603525764, 126.96371984820232),
+    //         new kakao.maps.LatLng(37.54546318600178, 126.95790512689311),
+    //         new kakao.maps.LatLng(37.54231338779177, 126.95817394011969),
+    //         new kakao.maps.LatLng(37.539468942052544, 126.955731506394),
+    //         new kakao.maps.LatLng(37.536292068277106, 126.95128907260018),
+    //         new kakao.maps.LatLng(37.53569162926515, 126.94627494388307),
+    //         new kakao.maps.LatLng(37.53377712226906, 126.94458373402794),
+    //         new kakao.maps.LatLng(37.54135238063506, 126.93031191951576),
+    //         new kakao.maps.LatLng(37.539036674424615, 126.9271006565075),
+    //         new kakao.maps.LatLng(37.54143034750605, 126.9224138272872),
+    //         new kakao.maps.LatLng(37.54141748538761, 126.90483000187002),
+    //         new kakao.maps.LatLng(37.548015078285694, 126.89890097452322),
+    //         new kakao.maps.LatLng(37.56300401736817, 126.86623824787709),
+    //         new kakao.maps.LatLng(37.57178997971358, 126.85363039091744),
+    //         new kakao.maps.LatLng(37.57379738998644, 126.85362646212587),
+    //         new kakao.maps.LatLng(37.57747251471329, 126.864939928088),
+    //         new kakao.maps.LatLng(37.5781913017327, 126.87625939970273),
+    //         new kakao.maps.LatLng(37.57977132158497, 126.87767870371688),
+    //         new kakao.maps.LatLng(37.584440882833654, 126.87653889183002),
+    //         new kakao.maps.LatLng(37.59079311146897, 126.88205386700724),
+    //         new kakao.maps.LatLng(37.584651324803644, 126.88883849288884)
+    //     ]
+    // }
+];
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        // center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+		center: new kakao.maps.LatLng(36.873416, 127.834575),
+        level: 13 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption),
+    customOverlay = new kakao.maps.CustomOverlay({}),
+    infowindow = new kakao.maps.InfoWindow({removable: true});
+
+// 지도에 영역데이터를 폴리곤으로 표시합니다 
+for (var i = 0, len = areas.length; i < len; i++) {
+    displayArea(areas[i]);
+}
+
+// 다각형을 생상하고 이벤트를 등록하는 함수입니다
+function displayArea(area) {
+
+    // 다각형을 생성합니다 
+    var polygon = new kakao.maps.Polygon({
+        map: map, // 다각형을 표시할 지도 객체
+        path: area.path,
+        strokeWeight: 2,
+        strokeColor: '#004c80',
+        strokeOpacity: 0.8,
+        fillColor: '#fff',
+        fillOpacity: 0.7 
+    });
+
+    // 다각형에 mouseover 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 변경합니다 
+    // 지역명을 표시하는 커스텀오버레이를 지도위에 표시합니다
+    kakao.maps.event.addListener(polygon, 'mouseover', function(mouseEvent) {
+        polygon.setOptions({fillColor: '#09f'});
+
+        customOverlay.setContent('<div class="area">' + area.name + '</div>');
+        
+        customOverlay.setPosition(mouseEvent.latLng); 
+        customOverlay.setMap(map);
+    });
+
+    // 다각형에 mousemove 이벤트를 등록하고 이벤트가 발생하면 커스텀 오버레이의 위치를 변경합니다 
+    kakao.maps.event.addListener(polygon, 'mousemove', function(mouseEvent) {
+        
+        customOverlay.setPosition(mouseEvent.latLng); 
+    });
+
+    // 다각형에 mouseout 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 원래색으로 변경합니다
+    // 커스텀 오버레이를 지도에서 제거합니다 
+    kakao.maps.event.addListener(polygon, 'mouseout', function() {
+        polygon.setOptions({fillColor: '#fff'});
+        customOverlay.setMap(null);
+    }); 
+
+    // 다각형에 click 이벤트를 등록하고 이벤트가 발생하면 다각형의 이름과 면적을 인포윈도우에 표시합니다 
+    kakao.maps.event.addListener(polygon, 'click', function(mouseEvent) {
+		var city = area.name;
+		var URL = "https://www.seoul.go.kr/coronaV/coronaStatus.do";
+		if(city == "서울특별시"){
+			URL = "https://www.seoul.go.kr/coronaV/coronaStatus.do";
+		}
+		else if(city == "경기도")
+			URL = "https://www.gg.go.kr/contents/contents.do?ciIdx=1150&menuId=2909";
+		else if(city == "강원도")
+			URL = "http://www.provin.gangwon.kr/gw/portal/sub05_01";
+		else if(city == "충청남도")
+			URL = "http://www.chungnam.go.kr/coronaStatus.do";
+		else if(city == "충청북도")
+			URL = "http://www1.chungbuk.go.kr/covid-19/index.do";
+		else if(city == "대전광역시")
+			URL = "https://www.daejeon.go.kr/corona19/index.do?tab=2&subTab=1";
+        var content = '<div class="info">' + 
+                    '   <div class="title">지역 이름 : ' + area.name + '</div>' +
+					' 	<div id="defCnt" class="size"></div>' +
+					' 	<div id="isolClearCnt" class="size"></div>' +
+					' 	<div id="deathCnt" class="size"></div>' +
+					' 	<div class="size">' + area.name + '현황 <a href = '+ URL +' target = "_blank">바로가기</a></div>' + 
+                    '</div>';
+		
+        infowindow.setContent(content); 
+        infowindow.setPosition(mouseEvent.latLng); 
+        infowindow.setMap(map);
+    });
+}
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <!-- Bar Chart -->
+						<div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">지역별 신규 확진자 통계</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-bar">
+                                        <canvas id="myBarChart"></canvas>
+                                    </div>
+                                    <hr>
+                                    <!-- Styling for the bar chart can be found in the
+                                    <code>/js/demo/chart-bar-demo.js</code> file. -->
+                                </div>
+                            </div>							
+						</div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+           
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">최근 이슈</h6>
+                                </div>
+								                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4 first" style="cursor:pointer;">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary first"></h6>
+                                </div>
+                                <div class="card-body first">
+
+                                </div>
+                            </div>
+								                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4 second" style="cursor:pointer;">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary second"></h6>
+                                </div>
+                                <div class="card-body second">
+
+                                </div>
+                            </div>
+								                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4 third" style="cursor:pointer;">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary third"></h6>
+                                </div>
+                                <div class="card-body third">
+
+                                </div>
+                            </div>
+								<!-- example >
+	
+								
+								
+                                <!-- <div class="card-body">
+                                    <h4 class="small font-weight-bold">Server Migration <span
+                                            class="float-right">20%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Sales Tracking <span
+                                            class="float-right">40%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Customer Database <span
+                                            class="float-right">60%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%"
+                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Payout Details <span
+                                            class="float-right">80%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Account Setup <span
+                                            class="float-right">Complete!</span></h4>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div> -->
+								
+                            </div>
+
+                            <!-- Color System -->
+							
+                            
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">사회적 거리두기 단계별 기준
+									<a href="https://news.naver.com/main/read.nhn?mode=LPOD&mid=sec&oid=001&aid=0012062522&isYeonhapFlash=Y&rc=N"style="color:red"  target="_blank">
+										(현재 : 2.5단계)</a></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+                                            src="../assets/socialroadrule.PNG" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Approach -->
+                            <!-- <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
+                                        CSS bloat and poor page performance. Custom CSS classes are used to create
+                                        custom components and custom utility classes.</p>
+                                    <p class="mb-0">Before working with this theme, you should become familiar with the
+                                        Bootstrap framework, especially the utility classes.</p>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+	<script src="js/demo/chart-bar-demo.js"></script>
+	
+	<!-- 지역별 확진자 순위 이벤트 처리 -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			const endpoint = 'http://hackathon-graphql.run.goorm.io/';
+			// 오늘날짜구하기
+			let today = new Date();
+			todayDate = String(today.getFullYear()) + String(today.getMonth() + 1) + String(today.getDate());
+			const query = `query {
+			  findCityConfirmedCnt(gubun: "합계", startCreateDt: "${todayDate}", endCreateDt: "${todayDate}") {
+				createDt
+				gubun
+				defCnt
+				isolClearCnt
+				deathCnt
+			  }
+			}`;
+			
+			fetch(endpoint, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ query })
+			  }).then((res) => res.json())
+				.then((json) => {
+					resultSet = json.data.findCityConfirmedCnt;
+					let defCnt = parseInt(resultSet[0].defCnt);
+					let isolClearCnt = parseInt(resultSet[0].isolClearCnt);
+					let deathCnt = parseInt(resultSet[0].deathCnt);
+				
+					$('#wholeConfirmedCnt').text(`${defCnt} 명`);
+					$('#wholeClearedCnt').text(`${isolClearCnt} 명`);
+					$('#wholeDeathCnt').text(`${deathCnt} 명`);
+					$('#CurrentConfirmedCnt').text(`${defCnt - isolClearCnt - deathCnt} 명`);
+				});
+		});
+	</script>
+	
+	<!-- Bar Chart 클릭 이벤트 처리 -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			let gubunsData = ["서울", "경기"];// graphql 쿼리에 넣을 데이터 (지역)
+			let today = new Date();
+			today.setDate(today.getDate() - 2);
+			
+			let labelsData = []; // barChart에 넣을 X축 값
+			let startCreateDt, endCreateDt; // graphql 쿼리에 넣을 데이터(시작일, 종료일)
+			let ltDt, rtDt; // 데이터를 받을 기댓값 (기댓값에 맞지 않으면 continue)
+			// 오늘 날짜로부터 5일이전까지의 데이터를 보여줄 것임.
+			for(var i=0;i<6;i++) {
+				if(i == 0) {
+					startCreateDt = String(today.getFullYear()) + String(today.getMonth() + 1) + String(today.getDate());
+					ltDt = today.getDate();
+				}
+				if(i == 5) {
+					endCreateDt = String(today.getFullYear()) + String(today.getMonth() + 1) + String(today.getDate());
+					rtDt = today.getDate();
+				}
+				
+				let currentNow = String(today.getFullYear()) + "-" + String(today.getMonth() + 1) + "-" + String(today.getDate());
+				labelsData.push(currentNow);
+				
+				today.setDate(today.getDate() + 1);	
+			}
+			// console.log("startCreateDt : " + startCreateDt);
+			// console.log("endCreateDt : " + endCreateDt);
+
+			$('#daum-maps-shape-0').click(async function(){
+				
+				let incDecData = []; // barChart에 넣을 데이터들
+				let resultSet;
+				console.log("서울 클릭!");
+				// 데이터 가져오기 in graphql
+				const endpoint = 'http://hackathon-graphql.run.goorm.io/';
+				const query = `query {
+				  findCityConfirmedCnt(gubun: "${gubunsData[0]}", startCreateDt: "${startCreateDt}", endCreateDt: "${endCreateDt}") {
+					createDt
+					gubun
+					incDec
+					isolClearCnt
+					overFlowCnt
+					defCnt
+					deathCnt
+				  }
+				}`;
+				
+				await fetch(endpoint, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ query })
+				  }).then((res) => res.json())
+					.then((json) => {
+					resultSet = json.data.findCityConfirmedCnt;
+					let idx = resultSet.length - 1;
+					var expectedModelCnt = 0;
+					for(var d=ltDt;d<=rtDt;d++) {
+						if(idx == -1) { // 예측모델 빈칸
+							incDecData.push(0);
+							continue;
+						}
+						
+						let compareDt = parseInt(resultSet[idx].createDt.substring(8, 10));
+						if(d == compareDt) {
+							incDecData.push(resultSet[idx].incDec);
+							idx--;
+						} else {
+							incDecData.pop();
+							incDecData.push(resultSet[idx].incDec);
+							idx--;
+							d--;
+						}
+					} // for
+					
+					console.log("incDecData : "+ incDecData);
+				});
+				// 예측 모델 파일읽기 (./js/module/readJson.js)
+				await $.ajax({
+					url : "./assets/expectedResult.json",
+					dataTYPE: "json",
+					success : function(json){
+						incDecData[3] = json.data[0].defCnt;
+						incDecData[4] = json.data[1].defCnt;
+						incDecData[5] = json.data[2].defCnt;
+					}
+				});
+
+				// 네모창에 데이터값 바꾸기
+				console.log(resultSet[0]);
+				$('#defCnt').text(`확진자 수 : ${resultSet[0].defCnt}`);
+				$('#isolClearCnt').text(`완치자 수 : ${resultSet[0].isolClearCnt}`);
+				$('#deathCnt').text(`사망자 수 : ${resultSet[0].deathCnt}`);
+				// $('#qurRate').text(`인구 10만 명당 발생률 : ${resultSet[0].qurRate}`);
+				
+				var ctx = document.getElementById("myBarChart");
+				var myBarChart = new Chart(ctx, {
+				  type: 'bar',
+				  data: {
+					// labels: ["January", "February", "March", "April", "May", "June"],
+					labels: labelsData,
+					datasets: [{
+					 	label: "신규 확진자",
+					 	backgroundColor: "#4e73df",
+					 	hoverBackgroundColor: "#2e59d9",
+					 	borderColor: "#4e73df",
+					  	// data: [4215, 5312, 6251, 7841, 9821, 14984],
+						data: incDecData,
+					}],
+				  },
+				  options: {
+					maintainAspectRatio: false,
+					layout: {
+					  padding: {
+						left: 10,
+						right: 25,
+						top: 25,
+						bottom: 0
+					  }
+					},
+					scales: {
+					  xAxes: [{
+						time: {
+						  unit: 'month'
+						},
+						gridLines: {
+						  display: false,
+						  drawBorder: false
+						},
+						ticks: {
+						  maxTicksLimit: 6
+						},
+						maxBarThickness: 25,
+					  }],
+					  yAxes: [{
+						ticks: {
+						  min: 0,
+						  max: 1000,
+						  maxTicksLimit: 5,
+						  padding: 10,
+						  // Include a dollar sign in the ticks
+						  callback: function(value, index, values) {
+							return number_format(value) + ' 명';
+						  }
+						},
+						gridLines: {
+						  color: "rgb(234, 236, 244)",
+						  zeroLineColor: "rgb(234, 236, 244)",
+						  drawBorder: false,
+						  borderDash: [2],
+						  zeroLineBorderDash: [2]
+						}
+					  }],
+					},
+					legend: {
+					  display: false
+					},
+					tooltips: {
+					  titleMarginBottom: 10,
+					  titleFontColor: '#6e707e',
+					  titleFontSize: 14,
+					  backgroundColor: "rgb(255,255,255)",
+					  bodyFontColor: "#858796",
+					  borderColor: '#dddfeb',
+					  borderWidth: 1,
+					  xPadding: 15,
+					  yPadding: 15,
+					  displayColors: false,
+					  caretPadding: 10,
+					  callbacks: {
+						label: function(tooltipItem, chart) {
+						  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+						  return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + "명";
+						}
+					  }
+					},
+				  }
+				}); //myBarChart
+			}); //daum-maps-shape-4
+		});
+	</script>
+</body>
+
+</html>

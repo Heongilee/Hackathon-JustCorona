@@ -1,0 +1,2 @@
+http://hackathon-justcorona-qumsh.run.goorm.io/
+http://hackathon-graphql.run.goorm.io/

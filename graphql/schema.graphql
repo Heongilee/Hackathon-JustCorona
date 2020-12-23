@@ -1,0 +1,22 @@
+type CoronaItem {
+    createDt: String	# 등록일시분초
+    deathCnt: Int		# 사망자 수
+    defCnt: Int			# 확진자 수
+    gubun: String		# 시도명(한글)
+    gubunCn: String		# 시도명(중국어)
+    gubunEn: String		# 시도명(영어)
+    incDec: Int			# 전일대비 증감수
+    isolClearCnt: Int	# 격리 해제 수
+    isolIngCnt: Int		# 격리중 환자수
+    localOccCnt: Int	# 지역발생 수
+    overFlowCnt: Int	# 해외유입 수
+    qurRate: String		# 10만명당 발생률
+    seq: Int			# 게시글 번호
+    stdDay: String		# 기준일시
+    updateDt: String	# 수정일시분초
+}
+
+type Query {
+	getCoronaItems(startCreateDt: String, endCreateDt: String): [CoronaItem]
+	findCityConfirmedCnt(gubun: String, startCreateDt: String, endCreateDt: String): [CoronaItem]
+}

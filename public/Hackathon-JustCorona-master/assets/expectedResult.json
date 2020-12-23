@@ -1,0 +1,16 @@
+{
+	"schema": {
+		"fields": [
+			{ "name": "index", "type": "integer" },
+			{ "name": "createDt", "type": "datetime" },
+			{ "name": "defCnt", "type": "number" }
+		],
+		"primaryKey": ["index"],
+		"pandas_version": "0.20.0"
+	},
+	"data": [
+		{ "index": 310, "createDt": "2020-12-23T00:00:00.000Z", "defCnt": 248 },
+		{ "index": 311, "createDt": "2020-12-24T00:00:00.000Z", "defCnt": 247 },
+		{ "index": 312, "createDt": "2020-12-25T00:00:00.000Z", "defCnt": 248 }
+	]
+}
